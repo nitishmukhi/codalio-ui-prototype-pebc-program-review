@@ -1,0 +1,21 @@
+import React from "react";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Progress } from "../components/ui/progress";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
+
+import { ArrowUpRight, CheckCircle2, Clock, Clock3, Database, FilePlus2, Files, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
+
+export default function Dashboard() {
+  return (
+    <div className="w-full min-w-0 overflow-x-hidden">
+      <div className="flex w-full flex-col gap-8 min-w-0">
+          <section className="space-y-6"><div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><div className="flex items-center gap-2"><h1 className="text-3xl font-semibold tracking-tight">Operational dashboard</h1><Badge variant="secondary">Live</Badge></div><p className="mt-2 text-muted-foreground">Tenant activity, compliance posture, and work requiring attention</p></div><Button asChild><Link to="/cases/new"><FilePlus2 className="mr-2 h-4 w-4" />New case</Link></Button></div><div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">{[{t:"Active cases",v:"128",m:"+8 this week",i:Files,p:68},{t:"Pending reviews",v:"17",m:"4 due today",i:Clock3,p:42},{t:"Pipeline success",v:"99.4%",m:"Last 30 days",i:CheckCircle2,p:99},{t:"Citation coverage",v:"96.8%",m:"+1.2% this month",i:ArrowUpRight,p:97}].map(({t,v,m,i:Icon,p})=><Card key={t}><CardHeader className="flex-row items-center justify-between pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t}</CardTitle><Icon className="h-4 w-4 text-primary" /></CardHeader><CardContent><p className="text-3xl font-semibold">{v}</p><p className="mt-1 text-xs text-muted-foreground">{m}</p><Progress value={p} className="mt-4 h-1.5" /></CardContent></Card>)}</div></section>
+  <section><h2 className="mb-4 text-xl font-semibold">Work requiring attention</h2><div className="grid gap-6 xl:grid-cols-[1.6fr_1fr]"><Card><CardHeader><CardTitle>Action queue</CardTitle></CardHeader><CardContent className="overflow-x-auto"><Table><TableHeader><TableRow><TableHead>Case</TableHead><TableHead>Status</TableHead><TableHead>Assignee</TableHead><TableHead></TableHead></TableRow></TableHeader><TableBody>{[["CA-1042","Pending Review","A. Morgan"],["CA-1039","Processing","Unassigned"],["CA-1037","Queued","J. Chen"]].map(r=><TableRow key={r[0]}><TableCell className="font-medium">{r[0]}</TableCell><TableCell><Badge variant="outline">{r[1]}</Badge></TableCell><TableCell>{r[2]}</TableCell><TableCell><Button variant="ghost" size="sm" asChild><Link to={`/cases/${r[0]}/review`}>Open</Link></Button></TableCell></TableRow>)}</TableBody></Table></CardContent></Card><Card><CardHeader><CardTitle>Pipeline health</CardTitle></CardHeader><CardContent className="space-y-5"><div><div className="flex justify-between text-sm"><span>Success rate</span><span className="font-medium">99.4%</span></div><Progress value={99} className="mt-2" /></div>{[[Clock,"Median ETA","3m 42s"],[Database,"Data residency","Canada Central"],[ShieldCheck,"AI retention","Zero"]].map(([Icon,label,value])=><div key={String(label)} className="flex items-center justify-between border-t pt-4"><span className="flex items-center gap-2 text-sm text-muted-foreground"><Icon className="h-4 w-4" />{label}</span><span className="text-sm font-medium">{value}</span></div>)}<p className="flex items-center gap-2 text-xs text-emerald-700"><CheckCircle2 className="h-4 w-4" />All controls operational</p></CardContent></Card></div></section>
+  <section><h2 className="mb-4 text-xl font-semibold">Compliance signals</h2><div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">{["Schema isolated","PII redaction operational","Immutable logging active","Claude zero-retention verified"].map(x=><Card key={x}><CardContent className="flex items-center gap-3 p-5"><span className="grid h-9 w-9 place-items-center rounded-full bg-emerald-100 text-emerald-700"><CheckCircle2 className="h-5 w-5" /></span><span className="text-sm font-medium">{x}</span></CardContent></Card>)}</div></section>
+      </div>
+    </div>
+  );
+}
