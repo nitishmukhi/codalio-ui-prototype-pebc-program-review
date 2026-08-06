@@ -4,8 +4,8 @@ import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Separator } from "../components/ui/separator";
-import { CheckCircle2 } from "lucide-react";
 
+import { CheckCircle2 } from "lucide-react";
 export default function DecisionConfirmation() {
   const { id } = useParams();
   const navigate = useNavigate();

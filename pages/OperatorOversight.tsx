@@ -11,8 +11,8 @@ import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
 import { Textarea } from "../components/ui/textarea";
-import { AlertTriangle } from "lucide-react";
 
+import { AlertTriangle } from "lucide-react";
 export default function OperatorOversight() {
   const [caseId, setCaseId] = useState("CASE-9015");
   const [errorType, setErrorType] = useState("citation");

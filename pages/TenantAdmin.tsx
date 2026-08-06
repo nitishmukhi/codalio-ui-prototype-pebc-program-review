@@ -10,8 +10,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { Switch } from "../components/ui/switch";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
-import { MoreHorizontal, UserPlus } from "lucide-react";
 
+import { MoreHorizontal, UserPlus } from "lucide-react";
 export default function TenantAdmin() {
   const [digestEnabled, setDigestEnabled] = useState(true);
 

@@ -1,8 +1,8 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { Badge } from "./ui/badge";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupLabel, SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider } from "./ui/sidebar";
-import { Files, LayoutDashboard, Library, LockKeyhole, ScanSearch, ShieldCheck } from "lucide-react";
 
+import { Files, LayoutDashboard, Library, LockKeyhole, ScanSearch, ShieldCheck } from "lucide-react";
 import ContextualTopBar from "./ContextualTopBar";
 
 const navItems = [

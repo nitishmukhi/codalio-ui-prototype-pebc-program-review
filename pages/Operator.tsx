@@ -5,8 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
 import { Progress } from "../components/ui/progress";
 import { Separator } from "../components/ui/separator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
-import { ArrowRight, Activity, ClipboardCheck, ShieldAlert, TestTube2 } from "lucide-react";
 
+import { ArrowRight, Activity, ClipboardCheck, ShieldAlert, TestTube2 } from "lucide-react";
 const metrics = [
   { label: "Pipeline health", value: "98.9%", progress: 99, icon: Activity },
   { label: "Seeded tests active", value: "16", progress: 64, icon: TestTube2 },

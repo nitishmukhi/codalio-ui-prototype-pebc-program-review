@@ -9,8 +9,8 @@ import { Label } from "../components/ui/label";
 import { Progress } from "../components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Textarea } from "../components/ui/textarea";
-import { ShieldCheck, Upload } from "lucide-react";
 
+import { ShieldCheck, Upload } from "lucide-react";
 export default function CaseIntake() {
   const [applicantReference, setApplicantReference] = useState("");
   const [program, setProgram] = useState("pebc");

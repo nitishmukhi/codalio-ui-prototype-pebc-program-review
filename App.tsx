@@ -25,6 +25,7 @@ function App() {
                 <Route path="/cases/new" element={<CaseIntake />} />
       <Route path="/knowledge-base/conflicts" element={<KnowledgeConflicts />} />
       <Route path="/operator" element={<Operator />} />
+      <Route path="/" element={<Dashboard />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/cases" element={<Cases />} />
       <Route path="/admin/audit-logs" element={<AuditLogs />} />

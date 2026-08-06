@@ -7,9 +7,9 @@ import { Input } from "../components/ui/input";
 import { Progress } from "../components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
+
 import { useNavigate } from "react-router-dom";
 import { Download, MoreHorizontal, Plus, Search } from "lucide-react";
-
 type CaseRow = { id: string; applicant: string; stage: string; progress: number; eta: string; assignee: string; updated: string };
 
 const caseRows: CaseRow[] = [

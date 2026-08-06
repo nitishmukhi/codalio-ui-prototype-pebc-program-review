@@ -6,8 +6,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { ScrollArea } from "./ui/scroll-area";
 import { Separator } from "./ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { Bell, Check } from "lucide-react";
 
+import { Bell, Check } from "lucide-react";
         export default function NotificationCenter() {
   const [unread, setUnread] = useState(3);
   const items = ["Case CA-1042 is ready for review", "Knowledge bundle synchronized", "Audit export completed"];

@@ -9,9 +9,9 @@ import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group";
 import { ScrollArea } from "../components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { Textarea } from "../components/ui/textarea";
+
 import { useNavigate } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-
 export default function KnowledgeConflicts() {
   const navigate = useNavigate();
   const [resolution, setResolution] = useState("keep-current");

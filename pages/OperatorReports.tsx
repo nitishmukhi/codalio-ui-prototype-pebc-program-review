@@ -6,8 +6,8 @@ import { Progress } from "../components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
-import { Download } from "lucide-react";
 
+import { Download } from "lucide-react";
 const metricRows = [
   { label: "Catch rate", value: "91%", progress: 91 },
   { label: "False positives", value: "4.2%", progress: 42 },
