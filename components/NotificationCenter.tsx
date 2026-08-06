@@ -1,12 +1,12 @@
 
 import { useState } from "react";
-import { Bell, Check } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { ScrollArea } from "./ui/scroll-area";
 import { Separator } from "./ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Bell, Check } from "lucide-react";
 
         export default function NotificationCenter() {
   const [unread, setUnread] = useState(3);

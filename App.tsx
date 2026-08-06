@@ -2,7 +2,6 @@ import "./styles.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import Landing from "./pages/Landing";
 import CaseIntake from "./pages/CaseIntake";
 import KnowledgeConflicts from "./pages/KnowledgeConflicts";
 import Operator from "./pages/Operator";
@@ -23,8 +22,7 @@ function App() {
 
       <Routes>
         <Route element={<Layout />}>
-                <Route path="/" element={<Landing />} />
-      <Route path="/cases/new" element={<CaseIntake />} />
+                <Route path="/cases/new" element={<CaseIntake />} />
       <Route path="/knowledge-base/conflicts" element={<KnowledgeConflicts />} />
       <Route path="/operator" element={<Operator />} />
       <Route path="/dashboard" element={<Dashboard />} />

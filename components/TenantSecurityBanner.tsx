@@ -1,9 +1,8 @@
-import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
-import { Badge } from "./ui/badge";
 
 
 import { ShieldCheck } from "lucide-react";
-
+import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
+import { Badge } from "./ui/badge";
         export default function TenantSecurityBanner() {
         return (
             <Alert className="border-primary/20 bg-accent text-accent-foreground">
